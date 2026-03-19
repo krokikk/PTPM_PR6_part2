@@ -31,5 +31,20 @@ namespace UnitTestProject1
 
             Assert.IsFalse(double.IsNaN(result));
         }
-    }
+
+        /// <summary>
+        /// Тест функции sinh(x)
+        /// </summary>
+        [TestMethod]
+        public void CalculateFx_Sinh_ReturnsCorrectValue()
+        {
+            double x = 1;
+
+            double result = MathFunctions.CalculateFx(x, 1);
+
+            Assert.AreEqual(Math.Sinh(x), result, 0.0001);
+        }
+
+      
+}
 }
