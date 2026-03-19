@@ -45,6 +45,19 @@ namespace UnitTestProject1
             Assert.AreEqual(Math.Sinh(x), result, 0.0001);
         }
 
-      
-}
+        /// <summary>
+        /// Тест основной логики Page2
+        /// </summary>
+        [TestMethod]
+        public void CalculateResult_ValidInput_ReturnsCorrectResult()
+        {
+            double x = 2;
+            double i = 3;
+            double fx = 4;
+
+            double result = MathFunctions.CalculateResult(x, i, fx);
+
+            Assert.AreEqual(i * Math.Sqrt(fx), result, 0.0001);
+        }
+    }
 }
