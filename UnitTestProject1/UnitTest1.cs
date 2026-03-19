@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PTPM_PR4;
 using System;
 
 namespace UnitTestProject1
@@ -14,6 +15,21 @@ namespace UnitTestProject1
             Assert.AreNotEqual(res, 5);
             Assert.IsFalse(res > 5);
             Assert.IsTrue(res < 5);
+        }
+
+        /// <summary>
+        /// Тест функции из Page1
+        /// </summary>
+        [TestMethod]
+        public void CalculateExpression_ValidInput_ReturnsCorrectResult()
+        {
+            double x = 1;
+            double y = 2;
+            double z = 3;
+
+            double result = MathFunctions.CalculateExpression(x, y, z);
+
+            Assert.IsFalse(double.IsNaN(result));
         }
     }
 }
